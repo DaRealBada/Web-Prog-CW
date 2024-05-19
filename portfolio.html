@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedding Service Portfolio</title>
+    <link rel="stylesheet" href="portfolio.css">
+    <link href="https://db.onlinewebfonts.com/c/a163d087c4bfdff182eb1b4fcc595798?family=Sansation+Light" rel="stylesheet">
+    <style>
+        /* Fixed Background Image */
+        .header {
+            display: flex;
+            justify-content: center; /* Center horizontally */
+            align-items: center; /* Center vertically */
+            height: 300px; /* Adjust height as needed */
+            background-image: url("weddheader.jpg");
+            background-size: cover; /* Ensure image covers the entire header */
+            background-position: center; /* Center the background image */
+            color: black;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add shadow for better readability */
+            font-family: 'Brush Script MT', cursive;
+            
+        }
+
+        body {
+            background-image: url("hilltop.jpg");
+            background-attachment: fixed;
+            font-family: 'Brush Script MT', cursive;
+        }
+
+        /* Side navigation */
+        .sidenav {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+            text-align: center;
+        }
+        
+        .sidenav a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        }
+        
+        .sidenav a:hover{
+            color: #f1f1f1;
+            font-family: 'Brush Script MT', cursive;
+        }
+        
+        .sidenav .closebtn {
+            position: absolute;
+            top: 0;
+            left: 0;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+        
+        @media screen and (max-height: 450px) {
+            .sidenav {padding-top: 15px;}
+            .sidenav a {font-size: 18px;}
+        }
+
+        /* Gallery */
+        main {
+            padding: 20px;
+        }
+
+        .gallery {
+            display: flex; /* Set display to flex */
+            flex-wrap: wrap; /* Allow flex items to wrap */
+            justify-content: space-between; /* Space between flex items */
+            gap: 20px; /* Add gap between flex items */
+        }
+
+        .image {
+            position: relative;
+            width: calc(33.33% - 20px); /* Adjust width for three columns with gap */
+            flex-grow: 1; /* Allow flex items to grow */
+        }
+
+        .image-container {
+            height: 300px; /* Set a fixed height for all image containers */
+            overflow: hidden; /* Hide overflow content */
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .image img {
+            width: 100%;
+            height: 100%; /* Ensure the image fills the container */
+            object-fit: cover; /* Cover the container while maintaining aspect ratio */
+            transition: transform 0.3s ease;
+        }
+
+        .image:hover img {
+            transform: scale(1.05);
+        }
+
+        .description {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 10px;
+            border-radius: 0 0 5px 5px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .image:hover .description {
+            opacity: 1;
+        }
+
+        .description h2, .description p {
+            color: #fff;
+            margin: 0;
+            text-align: center;
+        }
+
+        /* Filter options */
+        .filter-options {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+            
+        }
+
+        .filter-options button {
+            padding: 10px 20px;
+            margin: 0 10px;
+            border: none;
+            background-color: transparent;
+            color: #ffffff;
+            font-size: 16px;
+            border-radius: 0;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .filter-options button:hover {
+            color: #4CAF50;
+            font-size: larger;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="./wedding.php">Home</a>
+        <a href="./reviews.html">Reviews</a>
+        <a href="./venues.php">Venues</a>
+        <a href="./portfolio.html">Portfolio</a>
+        <a href="./contactus.html">Contact</a>
+    </div>
+    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
+
+    <header class="header">
+        <h1 class="h1">Portfolio</h1>
+    </header>
+
+    <main>
+        <!-- Filter options -->
+        <div class="filter-options">
+            <button onclick="showAll()">ALL</button>
+            <button onclick="showWeddings()">WEDDINGS</button>
+            <button onclick="showBrandEvents()">BRAND EVENTS</button>
+            <button onclick="showPrivateParties()">PRIVATE PARTIES</button>
+        </div>
+        <div class="gallery">
+            <div class="image weddings">
+                <div class="image-container">
+                    <img src="donny.webp" alt="Donny & Carla">
+                    <div class="description">
+                        <h2>Donny & Carla</h2>
+                       
+                    </div>
+                </div>
+            </div>
+            <div class="image brand-events">
+                <div class="image-container">
+                    <img src="rasheed.jpg" alt="Rasheed & Anya">
+                    <div class="description">
+                        <h2>Rasheed & Anya</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="image brand-events">
+                <div class="image-container">
+                    <img src="mohamed.webp" alt="Mohamed & Anais">
+                    <div class="description">
+                        <h2>Mohamed & Anais</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="image private-parties">
+                <div class="image-container">
+                    <img src="boojie.jpeg" alt="Chris & Shiva">
+                    <div class="description">
+                        <h2>Chris & Shiva</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="image weddings">
+                <div class="image-container">
+                    <img src="daniel.jpg" alt="Shariff & Alexa">
+                    <div class="description">
+                        <h2>Sheriff & Alexa</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="image private-parties">
+                <div class="image-container">
+                    <img src="cooper.jpg" alt="Ben & Claudia">
+                    <div class="description">
+                        <h2>Ben & Claudia</h2>
+                    </div>
+                </div>
+            </div>
+            <!-- Add more image divs with appropriate classes -->
+
+            <!-- Repeat similar structure for more images -->
+        </div>
+
+        <!-- Filter options -->
+        <div class="filter-options">
+            <button onclick="showAll()">ALL</button>
+            <button onclick="showWeddings()">WEDDINGS</button>
+            <button onclick="showBrandEvents()">BRAND EVENTS</button>
+            <button onclick="showPrivateParties()">PRIVATE PARTIES</button>
+        </div>
+    </main>
+
+    <footer>
+        <p>Contact us for more information about our wedding services.</p>
+    </footer>
+
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "100%";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+
+        function showAll() {
+            show("image");
+        }
+
+        function showWeddings() {
+            hide("image");
+            show("weddings");
+        }
+
+        function showBrandEvents() {
+            hide("image");
+            show("brand-events");
+        }
+
+        function showPrivateParties() {
+            hide("image");
+            show("private-parties");
+        }
+
+        function hide(className) {
+            let elements = document.getElementsByClassName(className);
+            for (let i = 0; i < elements.length; i++) {
+                elements[i].style.display = "none";
+            }
+        }
+        
+        function show(className) {
+            let elements = document.getElementsByClassName(className);
+            for (let i = 0; i < elements.length; i++) {
+                elements[i].style.display = "block";
+            }
+        }
+    </script>
+</body>
+</html>

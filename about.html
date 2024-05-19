@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedding Service Company</title>
+    <link rel="stylesheet" href="about.css">
+    <style>
+        .header {
+            display: flex;
+            justify-content: center; /* Center horizontally */
+            align-items: center; /* Center vertically */
+            height: 300px; /* Adjust height as needed */
+            background-image: url("weddheader.jpg");
+            background-size: cover; /* Ensure image covers the entire header */
+            background-position: center; /* Center the background image */
+        }
+
+        .h1 {
+            font-size: 36px; /* Adjust font size as needed */
+            color: beige;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add shadow for better readability */
+        }
+    </style>
+    
+</head>
+<body>
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="./wedding.php">Home</a>
+        <a href="./about.html">About</a>
+        <a href="#">Services</a>
+        <a href="./reviews.html">Reviews</a>
+        <a href="./venues.php">Venues</a>
+        <a href="./portfolio.html">Portfolio</a>
+        <a href="./contactus.html">Contact</a>
+    </div>
+    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
+
+    <script>
+        function openNav() {
+          document.getElementById("mySidenav").style.width = "100%";
+        }
+        
+        function closeNav() {
+          document.getElementById("mySidenav").style.width = "0";
+        }
+    </script>
+<header class="header">
+    <h1 class="h1">Divine Devotion</h1>
+    
+</header>
+
+<section class="hero">
+    <div class="container">
+        <h1>Your Dream Wedding Starts Here</h1>
+        <p>Let us make your special day unforgettable</p>
+    </div>
+</section>
+
+<section id="about" class="about">
+    <div class="container">
+        <h2>About Us</h2>
+    </div>
+</section>
+
+<section id="services" class="services">
+    <div class="container">
+        <h2>Our Services</h2>
+        <div class="service">
+            <h3>Wedding Planning</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <div class="service">
+            <h3>Venue Decoration</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <div class="service">
+            <h3>Photography & Videography</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+    </div>
+</section>
+
+
+<footer>
+    <div class="container">
+        <p>&copy; 2024 Exquisite Weddings. All rights reserved.</p>
+    </div>
+</footer>
+
+</body>
+</html>

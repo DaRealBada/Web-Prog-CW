@@ -1,0 +1,91 @@
+body {
+    font-family: 'Brush Script MT', cursive;
+    margin: 0;
+    padding: 5%;
+}
+
+@media (max-width: 750px) {
+    #background-video { display: none; }
+    body {
+      background: url("https://assets.codepen.io/6093409/river.jpg") no-repeat;
+      background-size: contain;
+    }
+}
+#background-video {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+  }
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.section {
+    margin-bottom: 30px;
+}
+
+.section h2:hover {
+    color: #007bff;
+    
+}
+
+.form-container {
+    background-color: black;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-container form label {
+    margin-bottom: 10px;
+}
+
+.form-container form select {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-container form input[type="submit"] {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.form-container form input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.form-container form output[type="submit"]{
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+

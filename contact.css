@@ -1,0 +1,92 @@
+html {
+    background-image: url("great.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+    height: 100%; /* Ensure the html element covers the entire viewport */
+    font-family: 'Brush Script MT', cursive;
+    font-size: 30px;
+  }
+
+body {
+    font-family: 'Brush Script MT', cursive;
+    
+
+
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.header {
+    background-color: #292929;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.header h1 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+.contact-section {
+    background-color: #fff;
+    padding: 50px 0;
+    margin-top: 20px;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 1.2em;
+    color: #292929;
+    margin-bottom: 5px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-group textarea {
+    height: 150px;
+}
+
+.form-group input[type="submit"] {
+    background-color: #292929;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+.form-group input[type="submit"]:hover {
+    background-color: #555;
+}
+
+.footer {
+    background-color: #292929;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
