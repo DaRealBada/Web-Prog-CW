@@ -19,6 +19,7 @@
 
         #venue-details table {
             width: 100%;
+            padding: 8px;
             border-collapse: collapse;
         }
 
