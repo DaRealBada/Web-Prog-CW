@@ -2,6 +2,7 @@
 function fetchChartData() {
     var venueName = document.getElementById("venueSelect").value;
     var canvasElement = document.getElementById("venueChart");
+    document.getElementById('newUserBtn').addEventListener('click', () => alert('New user added!'));
 
     // AJAX request to fetch review data
     var xhttp = new XMLHttpRequest();
